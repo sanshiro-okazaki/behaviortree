@@ -1,0 +1,21 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+schema:
+- name: behaviortree
+  path: .
+  commands:
+    build:
+      status: true
+      method: go build -o bt
+    run:
+      status: true
+      method: ./bt
+  watcher:
+    extensions:
+    - go
+    paths:
+    - /
+    ignored_paths:
+    - .git
